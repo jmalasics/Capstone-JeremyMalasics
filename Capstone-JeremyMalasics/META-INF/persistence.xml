@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+
+    <persistence-unit name="capstone">
+        <class>Persistence.DeviceEntity</class>
+        <class>Persistence.DeviceusagehistoryEntity</class>
+        <class>Persistence.EmployeeEntity</class>
+        <class>Persistence.EmployeerfidcardEntity</class>
+        <class>Persistence.RfidcardEntity</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/CapstoneJeremyMalasics"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="jmalasics"/>
+            <property name="hibernate.connection.password" value="Nu091095750"/>
+        </properties>
+    </persistence-unit>
+</persistence>
