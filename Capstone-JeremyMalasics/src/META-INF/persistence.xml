@@ -3,6 +3,7 @@
 
 
     <persistence-unit name="capstone">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>Persistence.DeviceEntity</class>
         <class>Persistence.DeviceusagehistoryEntity</class>
         <class>Persistence.EmployeeEntity</class>

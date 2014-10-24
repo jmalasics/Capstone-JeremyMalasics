@@ -3,13 +3,13 @@ package Persistence;
 import javax.persistence.*;
 
 /**
- * Created by jmalasics on 10/15/2014.
+ * Created by jmalasics on 10/22/2014.
  */
 @Entity
 @Table(name = "rfidcard", schema = "", catalog = "capstonejeremymalasics")
 public class RfidcardEntity {
     private int id;
-    private int rfidCode;
+    private String rfidCode;
 
     @Id
     @Column(name = "id")
@@ -23,11 +23,11 @@ public class RfidcardEntity {
 
     @Basic
     @Column(name = "rfidCode")
-    public int getRfidCode() {
+    public String getRfidCode() {
         return rfidCode;
     }
 
-    public void setRfidCode(int rfidCode) {
+    public void setRfidCode(String rfidCode) {
         this.rfidCode = rfidCode;
     }
 
@@ -39,7 +39,7 @@ public class RfidcardEntity {
         RfidcardEntity that = (RfidcardEntity) o;
 
         if (id != that.id) return false;
-        if (rfidCode != that.rfidCode) return false;
+        if (rfidCode != null ? !rfidCode.equals(that.rfidCode) : that.rfidCode != null) return false;
 
         return true;
     }
@@ -47,7 +47,7 @@ public class RfidcardEntity {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + rfidCode;
+        result = 31 * result + (rfidCode != null ? rfidCode.hashCode() : 0);
         return result;
     }
 }

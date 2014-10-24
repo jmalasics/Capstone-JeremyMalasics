@@ -3,13 +3,13 @@ package Persistence;
 import javax.persistence.*;
 
 /**
- * Created by jmalasics on 10/15/2014.
+ * Created by jmalasics on 10/22/2014.
  */
 @Entity
 @Table(name = "employeerfidcard", schema = "", catalog = "capstonejeremymalasics")
 public class EmployeerfidcardEntity {
     private int id;
-    private Integer rfid;
+    private String rfid;
     private Integer empId;
 
     @Id
@@ -24,11 +24,11 @@ public class EmployeerfidcardEntity {
 
     @Basic
     @Column(name = "rfid")
-    public Integer getRfid() {
+    public String getRfid() {
         return rfid;
     }
 
-    public void setRfid(Integer rfid) {
+    public void setRfid(String rfid) {
         this.rfid = rfid;
     }
 
