@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.MainWindowController">
+  <tabs>
+    <Tab text="Employee">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.2506265664160401" prefHeight="571.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane id="EmployeeList" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.1710758377425044" layoutX="38.0" layoutY="85.0" orientation="VERTICAL" prefHeight="569.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="90.0" prefWidth="233.0">
+                                       <children>
+                                          <Button fx:id="NewEmployeeButton" layoutX="50.0" layoutY="17.0" mnemonicParsing="false" onAction="#createEmployee" text="New Employee" />
+                                          <Button layoutX="41.0" layoutY="55.0" mnemonicParsing="false" onAction="#removeEmployee" text="Remove Employee" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane fx:id="empListAnchor" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TreeView id="EmpList" fx:id="EmpList" layoutX="8.0" layoutY="-83.0" prefHeight="280.0" prefWidth="233.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane id="EmployeeInformation" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5" layoutX="9.0" layoutY="63.0" orientation="VERTICAL" prefHeight="569.0" prefWidth="557.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="229.0" prefWidth="555.0">
+                                       <children>
+                                          <HBox layoutX="14.0" layoutY="62.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="70.0" text="First Name:" />
+                                                <TextField fx:id="firstName" layoutX="54.0" layoutY="10.0" prefHeight="25.0" prefWidth="148.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="14.0" layoutY="98.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="50.0" prefHeight="17.0" prefWidth="70.0" text="Last Name:" />
+                                                <TextField fx:id="lastName" layoutX="84.0" layoutY="46.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="14.0" layoutY="136.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="88.0" prefHeight="17.0" prefWidth="69.0" text="Date Hired:" />
+                                                <DatePicker fx:id="dateHired" prefHeight="25.0" prefWidth="150.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="257.0" layoutY="62.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="128.0" text="Department: " />
+                                                <ComboBox fx:id="department" layoutX="84.0" layoutY="124.0" prefWidth="150.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="256.0" layoutY="98.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="169.0" prefHeight="17.0" prefWidth="74.0" text="Job Title: " />
+                                                <TextField fx:id="jobTitle" layoutX="83.0" layoutY="165.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="21.0" layoutY="14.0" AnchorPane.bottomAnchor="187.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="301.0" AnchorPane.topAnchor="14.0">
+                                             <children>
+                                                <Label layoutX="21.0" layoutY="11.0" prefHeight="28.0" prefWidth="82.0" text="Employee ID:">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Text fx:id="employeeID" layoutX="96.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EmployeeID" wrappingWidth="150.13671875">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="256.0" layoutY="136.0" prefHeight="25.0" prefWidth="223.0">
+                                             <children>
+                                                <Label layoutX="256.0" layoutY="137.0" prefHeight="17.0" prefWidth="76.0" text="RFID Code: " />
+                                                <ComboBox fx:id="RFID" layoutX="327.0" layoutY="133.0" prefHeight="25.0" prefWidth="148.0" />
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="SaveEmployeeButton" layoutX="492.0" layoutY="185.0" mnemonicParsing="false" onAction="#modifyEmployee" text="Save">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TableView fx:id="EmpHistory" layoutX="154.0" layoutY="40.0" prefHeight="280.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                              <TableColumn prefWidth="81.0" text="Employee ID" />
+                                              <TableColumn prefWidth="112.0" text="RFID Code" />
+                                                <TableColumn prefWidth="90.0" text="Device" />
+                                                <TableColumn prefWidth="271.0" text="Time" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="RFID">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.08963093145869948" layoutX="136.0" layoutY="-58.0" orientation="VERTICAL" prefHeight="571.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="175.0" prefWidth="798.0">
+                           <children>
+                              <Button fx:id="newRFIDButton" layoutX="283.0" layoutY="12.0" mnemonicParsing="false" onAction="#createRFID" text="New RFID" />
+                              <Button layoutX="399.0" layoutY="12.0" mnemonicParsing="false" onAction="#removeRFID" text="Remove RFID" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView prefHeight="571.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn prefWidth="209.0" text="RFID" />
+                                  <TableColumn prefWidth="238.0" text="Employee ID" />
+                                    <TableColumn prefWidth="168.0" text="First" />
+                                    <TableColumn prefWidth="183.0" text="Last" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab text="Device">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.2506265664160401" layoutX="263.0" layoutY="164.0" prefHeight="571.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.1710758377425044" layoutX="5.0" layoutY="171.0" orientation="VERTICAL" prefHeight="569.0" prefWidth="169.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="105.0" prefWidth="195.0">
+                                       <children>
+                                          <Button fx:id="NewDeviceButton" layoutX="58.0" layoutY="15.0" mnemonicParsing="false" onAction="#createDevice" text="New Device" />
+                                          <Button layoutX="49.0" layoutY="57.0" mnemonicParsing="false" onAction="#removeDevice" text="Remove Device" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TreeView fx:id="DeviceList" layoutX="-65.0" layoutY="-152.0" prefHeight="280.0" prefWidth="167.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5" layoutX="239.0" layoutY="185.0" orientation="VERTICAL" prefHeight="569.0" prefWidth="623.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="94.0" prefWidth="621.0">
+                                       <children>
+                                          <HBox fx:id="DeviceIDHBox" layoutX="27.0" layoutY="14.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="65.0" text="Device ID: ">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Text fx:id="DeviceID" layoutX="79.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DeviceID">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </HBox>
+                                          <HBox fx:id="DeviceHBox" layoutX="14.0" layoutY="54.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="54.0" prefHeight="17.0" prefWidth="85.0" text="Device Name: " />
+                                                <Text fx:id="DeviceName" layoutX="100.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DeviceName" wrappingWidth="133.85546875" />
+                                                <Label layoutX="193.0" layoutY="54.0" prefHeight="17.0" prefWidth="80.0" text="Total Usage: " />
+                                                <Text fx:id="DeviceUsage" layoutX="276.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TotalUsage" wrappingWidth="106.30078125" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="465.0" prefWidth="621.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.5" layoutX="231.0" layoutY="125.0" orientation="VERTICAL" prefHeight="479.0" prefWidth="621.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <LineChart fx:id="UsageHistory" layoutX="49.0" layoutY="-61.0" prefHeight="236.0" prefWidth="619.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <xAxis>
+                                                          <CategoryAxis side="BOTTOM" />
+                                                        </xAxis>
+                                                        <yAxis>
+                                                          <NumberAxis side="LEFT" />
+                                                        </yAxis>
+                                                      </LineChart>
+                                                   </children>
+                                                </AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <TableView fx:id="ActivationTimes" layoutX="170.0" layoutY="18.0" prefHeight="235.0" prefWidth="619.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <columns>
+                                                          <TableColumn prefWidth="312.0" text="Start Activation Time" />
+                                                          <TableColumn prefWidth="305.0" text="End Activation Time" />
+                                                        </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Calendar">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

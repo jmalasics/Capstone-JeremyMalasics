@@ -6,10 +6,10 @@ import javax.persistence.*;
  * Created by jmalasics on 11/11/2014.
  */
 @Entity
-@Table(name = "rfidcard", schema = "", catalog = "capstonejeremymalasics")
-public class RfidcardEntity {
+@Table(name = "department", schema = "", catalog = "capstonejeremymalasics")
+public class DepartmentEntity {
     private int id;
-    private String rfidCode;
+    private String department;
 
     @Id
     @Column(name = "id")
@@ -22,13 +22,13 @@ public class RfidcardEntity {
     }
 
     @Basic
-    @Column(name = "rfidCode")
-    public String getRfidCode() {
-        return rfidCode;
+    @Column(name = "department")
+    public String getDepartment() {
+        return department;
     }
 
-    public void setRfidCode(String rfidCode) {
-        this.rfidCode = rfidCode;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
     @Override
@@ -36,10 +36,10 @@ public class RfidcardEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        RfidcardEntity that = (RfidcardEntity) o;
+        DepartmentEntity that = (DepartmentEntity) o;
 
         if (id != that.id) return false;
-        if (rfidCode != null ? !rfidCode.equals(that.rfidCode) : that.rfidCode != null) return false;
+        if (department != null ? !department.equals(that.department) : that.department != null) return false;
 
         return true;
     }
@@ -47,7 +47,7 @@ public class RfidcardEntity {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (rfidCode != null ? rfidCode.hashCode() : 0);
+        result = 31 * result + (department != null ? department.hashCode() : 0);
         return result;
     }
 }

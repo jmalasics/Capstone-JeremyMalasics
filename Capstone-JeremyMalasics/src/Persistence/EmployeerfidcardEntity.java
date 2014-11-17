@@ -3,7 +3,7 @@ package Persistence;
 import javax.persistence.*;
 
 /**
- * Created by jmalasics on 10/22/2014.
+ * Created by jmalasics on 11/11/2014.
  */
 @Entity
 @Table(name = "employeerfidcard", schema = "", catalog = "capstonejeremymalasics")

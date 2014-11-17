@@ -6,9 +6,9 @@ import Persistence.*;
 /**
  * Created by jmalasics on 10/16/2014.
  */
-public class DeviceController extends DatabaseController {
+public class DeviceDatabaseController extends DatabaseController {
 
-    public DeviceController(String persistenceUnit) {
+    public DeviceDatabaseController(String persistenceUnit) {
         super(persistenceUnit);
     }
 
@@ -32,7 +32,7 @@ public class DeviceController extends DatabaseController {
         //TODO Test remove device
         try {
             entityManager().getTransaction().begin();
-            DeviceEntity deviceEntity = (DeviceEntity) entityManager().createNativeQuery("SELECT * FROM device").getSingleResult();
+            DeviceEntity deviceEntity = (DeviceEntity) entityManager().createNativeQuery("SELECT * FROM device WHERE id = " + deviceId).getSingleResult();
             entityManager().remove(deviceEntity);
             entityManager().getTransaction().commit();
             return true;
@@ -48,6 +48,19 @@ public class DeviceController extends DatabaseController {
         try {
             entityManager().getTransaction().begin();
             DeviceEntity deviceEntity = (DeviceEntity) entityManager().createNativeQuery("SELECT * FROM device WHERE id = " + deviceId).getSingleResult();
+            entityManager().getTransaction().commit();
+            return deviceEntity;
+        } catch(Exception e) {
+            e.printStackTrace();
+            entityManager().getTransaction().rollback();
+            return null;
+        }
+    }
+
+    public DeviceEntity getDevice(String deviceName) {
+        try {
+            entityManager().getTransaction().begin();
+            DeviceEntity deviceEntity = (DeviceEntity) entityManager().createNativeQuery("SELECT * FROM device WHERE device = '" + deviceName + "'").getSingleResult();
             entityManager().getTransaction().commit();
             return deviceEntity;
         } catch(Exception e) {
