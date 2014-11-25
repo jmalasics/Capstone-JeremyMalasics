@@ -13,7 +13,6 @@ public class DeviceDatabaseController extends DatabaseController {
     }
 
     public boolean addDevice(String device) {
-        //TODO Test add device
         try {
             entityManager().getTransaction().begin();
             DeviceEntity deviceEntity = new DeviceEntity();
@@ -29,10 +28,9 @@ public class DeviceDatabaseController extends DatabaseController {
     }
 
     public boolean removeDevice(int deviceId) {
-        //TODO Test remove device
         try {
             entityManager().getTransaction().begin();
-            DeviceEntity deviceEntity = (DeviceEntity) entityManager().createNativeQuery("SELECT * FROM device WHERE id = " + deviceId).getSingleResult();
+            DeviceEntity deviceEntity = (DeviceEntity) entityManager().createNativeQuery("SELECT * FROM device WHERE id = " + deviceId, DeviceEntity.class).getSingleResult();
             entityManager().remove(deviceEntity);
             entityManager().getTransaction().commit();
             return true;
@@ -44,10 +42,9 @@ public class DeviceDatabaseController extends DatabaseController {
     }
 
     public DeviceEntity getDevice(int deviceId) {
-        //TODO Test get device
         try {
             entityManager().getTransaction().begin();
-            DeviceEntity deviceEntity = (DeviceEntity) entityManager().createNativeQuery("SELECT * FROM device WHERE id = " + deviceId).getSingleResult();
+            DeviceEntity deviceEntity = (DeviceEntity) entityManager().createNativeQuery("SELECT * FROM device WHERE id = " + deviceId, DeviceEntity.class).getSingleResult();
             entityManager().getTransaction().commit();
             return deviceEntity;
         } catch(Exception e) {
@@ -60,7 +57,7 @@ public class DeviceDatabaseController extends DatabaseController {
     public DeviceEntity getDevice(String deviceName) {
         try {
             entityManager().getTransaction().begin();
-            DeviceEntity deviceEntity = (DeviceEntity) entityManager().createNativeQuery("SELECT * FROM device WHERE device = '" + deviceName + "'").getSingleResult();
+            DeviceEntity deviceEntity = (DeviceEntity) entityManager().createNativeQuery("SELECT * FROM device WHERE device = '" + deviceName + "'", DeviceEntity.class).getSingleResult();
             entityManager().getTransaction().commit();
             return deviceEntity;
         } catch(Exception e) {
@@ -71,12 +68,37 @@ public class DeviceDatabaseController extends DatabaseController {
     }
 
     public List<DeviceEntity> getDeviceList() {
-        //TODO Test list devices
         try {
             entityManager().getTransaction().begin();
-            List<DeviceEntity> deviceEntities = (List<DeviceEntity>) entityManager().createNativeQuery("SELECT * FROM device").getResultList();
+            List<DeviceEntity> deviceEntities = (List<DeviceEntity>) entityManager().createNativeQuery("SELECT * FROM device", DeviceEntity.class).getResultList();
             entityManager().getTransaction().commit();
             return deviceEntities;
+        } catch(Exception e) {
+            e.printStackTrace();
+            entityManager().getTransaction().rollback();
+            return null;
+        }
+    }
+
+    public List<DeviceactivationtimesEntity> getDeviceActivationTimes(DeviceEntity deviceEntity) {
+        try {
+            entityManager().getTransaction().begin();
+            List<DeviceactivationtimesEntity> deviceactivationtimesEntities = (List<DeviceactivationtimesEntity>) entityManager().createNativeQuery("SELECT * FROM deviceactivationtimes WHERE deviceID = " + deviceEntity.getId(), DeviceactivationtimesEntity.class).getResultList();
+            entityManager().getTransaction().commit();
+            return deviceactivationtimesEntities;
+        } catch(Exception e) {
+            e.printStackTrace();
+            entityManager().getTransaction().rollback();
+            return null;
+        }
+    }
+
+    public List<DeviceusagehistoryEntity> getDeviceUsageHistory(DeviceEntity deviceEntity) {
+        try {
+            entityManager().getTransaction().begin();
+            List<DeviceusagehistoryEntity> deviceusagehistoryEntities = (List<DeviceusagehistoryEntity>) entityManager().createNativeQuery("SELECT * FROM deviceusagehistory WHERE deviceId = " + deviceEntity.getId(), DeviceusagehistoryEntity.class).getResultList();
+            entityManager().getTransaction().commit();
+            return deviceusagehistoryEntities;
         } catch(Exception e) {
             e.printStackTrace();
             entityManager().getTransaction().rollback();

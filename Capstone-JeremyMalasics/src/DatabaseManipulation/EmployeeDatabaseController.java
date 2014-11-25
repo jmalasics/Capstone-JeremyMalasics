@@ -124,9 +124,11 @@ public class EmployeeDatabaseController extends DatabaseController {
             entityManager().getTransaction().commit();
             return employeerfidcardEntity;
         } catch(Exception e) {
-            e.printStackTrace();
             entityManager().getTransaction().rollback();
-            return null;
+            EmployeerfidcardEntity noRFID = new EmployeerfidcardEntity();
+            noRFID.setEmpId(employeeId);
+            noRFID.setRfid(null);
+            return noRFID;
         }
     }
 
@@ -172,7 +174,7 @@ public class EmployeeDatabaseController extends DatabaseController {
     public EmployeeEntity getEmployeeByFirstAndLast(String firstName, String lastName) {
         try {
             entityManager().getTransaction().begin();
-            EmployeeEntity employeeEntity = (EmployeeEntity) entityManager().createNativeQuery("SELECT * FROM employee WHERE firstName = '" + firstName + "' AND lastName = '" + lastName + "'").getSingleResult();
+            EmployeeEntity employeeEntity = (EmployeeEntity) entityManager().createNativeQuery("SELECT * FROM employee WHERE firstName = '" + firstName + "' AND lastName = '" + lastName + "'", EmployeeEntity.class).getSingleResult();
             entityManager().getTransaction().commit();
             return employeeEntity;
         } catch(Exception e) {

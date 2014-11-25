@@ -6,6 +6,8 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
+<!-- <?import jfxtras.scene.control.agenda.*?> -->
+
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.MainWindowController">
   <tabs>
     <Tab text="Employee">
@@ -26,7 +28,7 @@
                                     </AnchorPane>
                                   <AnchorPane fx:id="empListAnchor" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                        <children>
-                                          <TreeView id="EmpList" fx:id="EmpList" layoutX="8.0" layoutY="-83.0" prefHeight="280.0" prefWidth="233.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                          <TreeView fx:id="empList" layoutX="8.0" layoutY="-83.0" prefHeight="280.0" prefWidth="233.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                        </children>
                                     </AnchorPane>
                                 </items>
@@ -76,7 +78,7 @@
                                                       <Font size="13.0" />
                                                    </font>
                                                 </Label>
-                                                <Text fx:id="employeeID" layoutX="96.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EmployeeID" wrappingWidth="150.13671875">
+                                                <Text fx:id="employeeID" layoutX="96.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EmployeeID" visible="false" wrappingWidth="150.13671875">
                                                    <font>
                                                       <Font size="19.0" />
                                                    </font>
@@ -166,7 +168,7 @@
                                     </AnchorPane>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                        <children>
-                                          <TreeView fx:id="DeviceList" layoutX="-65.0" layoutY="-152.0" prefHeight="280.0" prefWidth="167.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                          <TreeView fx:id="deviceList" layoutX="-65.0" layoutY="-152.0" prefHeight="280.0" prefWidth="167.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                        </children>
                                     </AnchorPane>
                                 </items>
@@ -186,7 +188,7 @@
                                                       <Font size="13.0" />
                                                    </font>
                                                 </Label>
-                                                <Text fx:id="DeviceID" layoutX="79.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DeviceID">
+                                                <Text fx:id="deviceID" layoutX="79.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="deviceID" visible="false">
                                                    <font>
                                                       <Font size="19.0" />
                                                    </font>
@@ -196,9 +198,9 @@
                                           <HBox fx:id="DeviceHBox" layoutX="14.0" layoutY="54.0">
                                              <children>
                                                 <Label layoutX="14.0" layoutY="54.0" prefHeight="17.0" prefWidth="85.0" text="Device Name: " />
-                                                <Text fx:id="DeviceName" layoutX="100.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DeviceName" wrappingWidth="133.85546875" />
+                                                <Text fx:id="deviceName" layoutX="100.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="deviceName" visible="false" wrappingWidth="133.85546875" />
                                                 <Label layoutX="193.0" layoutY="54.0" prefHeight="17.0" prefWidth="80.0" text="Total Usage: " />
-                                                <Text fx:id="DeviceUsage" layoutX="276.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TotalUsage" wrappingWidth="106.30078125" />
+                                                <Text fx:id="totalUsage" layoutX="276.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="totalUsage" visible="false" wrappingWidth="106.30078125" />
                                              </children>
                                           </HBox>
                                        </children>
@@ -221,10 +223,10 @@
                                                 </AnchorPane>
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                                    <children>
-                                                      <TableView fx:id="ActivationTimes" layoutX="170.0" layoutY="18.0" prefHeight="235.0" prefWidth="619.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <TableView fx:id="activationTimes" layoutX="170.0" layoutY="18.0" prefHeight="235.0" prefWidth="619.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                         <columns>
-                                                          <TableColumn prefWidth="312.0" text="Start Activation Time" />
-                                                          <TableColumn prefWidth="305.0" text="End Activation Time" />
+                                                          <TableColumn fx:id="startTime" prefWidth="312.0" text="Start Activation Time" />
+                                                          <TableColumn fx:id="endTime" prefWidth="305.0" text="End Activation Time" />
                                                         </columns>
                                                       </TableView>
                                                    </children>
@@ -245,7 +247,9 @@
     </Tab>
       <Tab text="Calendar">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          <AnchorPane fx:id="agendaAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <!-- <Agenda fx:id="agenda" minHeight="180.0" minWidth="200.0" prefHeight="180.0" prefWidth="200.0" /> -->
+          </AnchorPane>
         </content>
       </Tab>
   </tabs>

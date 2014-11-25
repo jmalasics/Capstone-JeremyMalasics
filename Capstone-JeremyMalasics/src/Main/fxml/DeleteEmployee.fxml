@@ -5,7 +5,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.EmployeeController">
    <children>
       <Text layoutX="73.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remove Employee">
@@ -13,7 +12,7 @@
             <Font size="19.0" />
          </font>
       </Text>
-      <ComboBox fx:id="deleteEmployee" layoutX="75.0" layoutY="63.0" prefWidth="150.0" />
+      <ComboBox fx:id="deleteEmployee" layoutX="75.0" layoutY="63.0" prefWidth="150.0" promptText="Select Employee" />
       <Button layoutX="121.0" layoutY="105.0" mnemonicParsing="false" onAction="#removeEmployee" text="Remove" />
    </children>
 </Pane>

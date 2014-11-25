@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="MySQL - CapstoneJeremyMalasics@localhost" uuid="01740617-9bb4-49d8-a13b-703de8ed4f32">
+  <data-source source="LOCAL" name="MySQL - CapstoneJeremyMalasics@localhost" uuid="e4231f18-a823-4c79-ad2d-6b45bcebda08">
     <database-info product="MySQL" version="5.6.20-enterprise-commercial-advanced" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
@@ -28,6 +28,16 @@
       <column name="device" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12"/>
       <column name="totalUsage" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="deviceActivationTimes_foreign_1" table="deviceactivationtimes" schema="" catalog="capstonejeremymalasics" columns="deviceID"/>
+    </table>
+    <table name="deviceactivationtimes" schema="" catalog="capstonejeremymalasics" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="deviceID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="activationTime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="disableTime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="deviceActivationTimes_foreign_1" columns="deviceID" ref-table="device" ref-schema="" ref-catalog="capstonejeremymalasics" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="deviceID" unique="true" columns="activationTime"/>
     </table>
     <table name="deviceusagehistory" schema="" catalog="capstonejeremymalasics" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>

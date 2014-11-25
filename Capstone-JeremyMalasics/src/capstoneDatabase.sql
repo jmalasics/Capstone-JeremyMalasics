@@ -32,6 +32,13 @@ CREATE TABLE DeviceUsageHistory (id INT PRIMARY KEY AUTO_INCREMENT,
 									timeStored DATETIME NOT NULL,
 									recentUsage DECIMAL NOT NULL
 );
+CREATE TABLE DeviceActivationTimes (id INT PRIMARY KEY AUTO_INCREMENT, 
+					deviceID INT NOT NULL,
+					activationTime DATETIME NOT NULL,
+					disableTime DATETIME NOT NULL,
+					UNIQUE (deviceID, activationTime),
+					CONSTRAINT deviceActivationTimes_foreign_1 FOREIGN KEY (deviceID) REFERENCES Device (id)
+);
 INSERT INTO Department (department) VALUES ("Management");
 INSERT INTO Department (department) VALUES ("Computer Science");
 INSERT INTO Department (department) VALUES ("Game Development");
@@ -55,4 +62,13 @@ INSERT INTO EmployeeRFIDCard (rfid, empId) VALUES ("0100763FC5", 6);
 INSERT INTO Device (device, totalUsage) VALUES ("ROOM202_RFID", 0);
 INSERT INTO Device (device, totalUsage) VALUES ("ROOM202_PIR", 0);
 INSERT INTO Device (device, totalUsage) VALUES ("ROOM202_LIGHTS", 0);
+INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES (1, CURDATE(), "2014-11-24 15:00:00");
+INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES (2, CURDATE(), "2014-11-24 15:00:00");
+INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES (3, CURDATE(), "2014-11-24 15:00:00");
+INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES (1, "2014-11-25 12:00:00", "2014-11-25 15:00:00");
+INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES (2, "2014-11-25 12:00:00", "2014-11-25 15:00:00");
+INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES (3, "2014-11-25 12:00:00", "2014-11-25 15:00:00");
+INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES (1, "2014-11-26 12:00:00", "2014-11-26 15:00:00");
+INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES (2, "2014-11-26 12:00:00", "2014-11-26 15:00:00");
+INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES (3, "2014-11-26 12:00:00", "2014-11-26 15:00:00");
 								

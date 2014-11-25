@@ -17224,3 +17224,23 @@
 [Mon Nov 17 13:56:42 MST 2014] ERROR. Exception thrown reading from serial.
 [Mon Nov 17 13:56:42 MST 2014] ERROR. Exception thrown reading from serial.
 [Mon Nov 17 13:56:42 MST 2014] ERROR. Exception thrown reading from serial.
+[Mon Nov 17 14:18:59 MST 2014] System initializing...
+[Mon Nov 17 14:19:06 MST 2014] System initialized.
+[Mon Nov 17 14:19:17 MST 2014] RFID READ: 0100764EF6
+[Mon Nov 17 14:19:17 MST 2014] RFID INVALID: 0100764EF6
+[Mon Nov 17 14:19:17 MST 2014] Motion detector turned lights on. 
+
+[Mon Nov 17 14:19:19 MST 2014] RFID READ: 0100764EF6
+[Mon Nov 17 14:19:19 MST 2014] RFID INVALID: 0100764EF6
+[Mon Nov 17 14:19:36 MST 2014] RFID READ: 010077A2A7
+[Mon Nov 17 14:19:36 MST 2014] RFID VALID: 010077A2A7
+[Mon Nov 17 14:19:38 MST 2014] RFID READ: 010077A2A7
+[Mon Nov 17 14:19:38 MST 2014] RFID VALID: 010077A2A7
+[Mon Nov 17 14:19:40 MST 2014] RFID READ: 010077A2A7
+[Mon Nov 17 14:19:40 MST 2014] RFID VALID: 010077A2A7
+[Mon Nov 17 14:19:57 MST 2014] Motion detector turned lights on. 
+
+[Mon Nov 17 14:20:01 MST 2014] RFID READ: 010077A2A7
+[Mon Nov 17 14:20:01 MST 2014] RFID VALID: 010077A2A7
+[Mon Nov 17 14:31:51 MST 2014] System initializing...
+[Mon Nov 17 14:31:55 MST 2014] System initialized.

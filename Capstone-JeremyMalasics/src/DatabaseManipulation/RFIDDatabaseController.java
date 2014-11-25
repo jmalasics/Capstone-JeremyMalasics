@@ -31,12 +31,9 @@ public class RFIDDatabaseController extends DatabaseController {
         try {
             String code = new String(rfidCode);
             entityManager().getTransaction().begin();
-            RfidcardEntity rfidcardEntity = new RfidcardEntity();
-            rfidcardEntity.setRfidCode(code);
             EmployeerfidcardEntity employeerfidcardEntity = new EmployeerfidcardEntity();
             employeerfidcardEntity.setEmpId(employeeId);
             employeerfidcardEntity.setRfid(code);
-            entityManager().persist(rfidcardEntity);
             entityManager().persist(employeerfidcardEntity);
             entityManager().getTransaction().commit();
             return true;
@@ -82,7 +79,7 @@ public class RFIDDatabaseController extends DatabaseController {
         try {
             String code = new String(rfidCode);
             entityManager().getTransaction().begin();
-            RfidcardEntity rfidcardEntity = (RfidcardEntity) entityManager().createNativeQuery("SELECT * FROM rfidcard WHERE rfidCode = " + code).getSingleResult();
+            RfidcardEntity rfidcardEntity = (RfidcardEntity) entityManager().createNativeQuery("SELECT * FROM rfidcard WHERE rfidCode = '" + code + "'", RfidcardEntity.class).getSingleResult();
             entityManager().getTransaction().commit();
             return rfidcardEntity;
         } catch(Exception e) {

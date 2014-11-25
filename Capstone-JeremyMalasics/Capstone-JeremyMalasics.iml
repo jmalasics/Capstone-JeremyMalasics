@@ -89,6 +89,8 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="org.scream3r:jssc:2.8.0" level="project" />
+    <orderEntry type="library" name="org.jfxtras:jfxtras-all:8.0-r2" level="project" />
+    <orderEntry type="library" name="org.jfxtras:jfxtras-agenda:8.0-r2" level="project" />
   </component>
 </module>
 

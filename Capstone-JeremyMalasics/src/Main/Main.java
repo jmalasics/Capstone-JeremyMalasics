@@ -16,8 +16,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         mainWindowController = new MainWindowController();
-        createEmployeeController = new EmployeeController();
-        createDeviceController = new DeviceController();
+        createEmployeeController = new EmployeeController(mainWindowController);
+        createDeviceController = new DeviceController(mainWindowController);
         Parent root = FXMLLoader.load(getClass().getResource("fxml/capstoneGUI.fxml"));
         primaryStage.setTitle("Main window");
         primaryStage.setScene(new Scene(root, 800, 600));
