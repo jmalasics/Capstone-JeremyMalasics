@@ -14,7 +14,7 @@ public class EmployeeDatabaseController extends DatabaseController {
         super(persistenceUnit);
     }
 
-    public boolean addEmployee(String firstName, String lastName, Date dateHired, String department, String jobTitle) {
+    public EmployeeEntity addEmployee(String firstName, String lastName, Date dateHired, String department, String jobTitle) {
         try {
             EmployeeEntity employeeEntity = new EmployeeEntity();
             employeeEntity.setFirstName(firstName);
@@ -25,11 +25,11 @@ public class EmployeeDatabaseController extends DatabaseController {
             entityManager().getTransaction().begin();
             entityManager().persist(employeeEntity);
             entityManager().getTransaction().commit();
-            return true;
+            return employeeEntity;
         } catch(Exception e) {
             e.printStackTrace();
             entityManager().getTransaction().rollback();
-            return false;
+            return null;
         }
     }
 
@@ -181,6 +181,48 @@ public class EmployeeDatabaseController extends DatabaseController {
             e.printStackTrace();
             entityManager().getTransaction().rollback();
             return null;
+        }
+    }
+
+    public List<RfidusagehistoryEntity> getEmployeeHistory(int employeeId) {
+        try {
+            entityManager().getTransaction().begin();
+            List<RfidusagehistoryEntity> rfidusagehistoryEntities = (List<RfidusagehistoryEntity>) entityManager().createNativeQuery("SELECT * FROm rfidusagehistory WHERE employeeID = " + employeeId, RfidusagehistoryEntity.class).getResultList();
+            entityManager().getTransaction().commit();
+            return rfidusagehistoryEntities;
+        } catch(Exception e) {
+            e.printStackTrace();
+            entityManager().getTransaction().rollback();
+            return null;
+        }
+    }
+
+    public boolean addDepartment(String name) {
+        try {
+            entityManager().getTransaction().begin();
+            DepartmentEntity departmentEntity = new DepartmentEntity();
+            departmentEntity.setDepartment(name);
+            entityManager().persist(departmentEntity);
+            entityManager().getTransaction().commit();
+            return true;
+        } catch(Exception e) {
+            e.printStackTrace();
+            entityManager().getTransaction().rollback();
+            return false;
+        }
+    }
+
+    public boolean removeDepartment(String name) {
+        try {
+            entityManager().getTransaction().begin();
+            DepartmentEntity departmentEntity = (DepartmentEntity) entityManager().createNativeQuery("SELECT * FROM department WHERE department = '" + name + "'", DepartmentEntity.class).getSingleResult();
+            entityManager().remove(departmentEntity);
+            entityManager().getTransaction().commit();
+            return true;
+        } catch(Exception e) {
+            e.printStackTrace();
+            entityManager().getTransaction().rollback();
+            return false;
         }
     }
 

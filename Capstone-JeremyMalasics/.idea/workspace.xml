@@ -11,6 +11,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Capstone-JeremyMalasics$Main.coverage" NAME="Main Coverage Results" MODIFIED="1417256647959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Main.*</FILTER>
+    </SUITE>
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -52,8 +57,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
+    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -61,11 +66,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainWindowController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/Controllers/MainWindowController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4184" max-vertical-offset="5185">
+              <caret line="768" column="99" selection-start-line="768" selection-start-column="99" selection-end-line="768" selection-end-column="99" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="n#!!doc;n#deviceDatabaseController#0;n#MainWindowController#0" expanded="false" />
+                <element signature="n#!!doc;n#createEmployeeStage#0;n#MainWindowController#0" expanded="false" />
+                <element signature="n#!!doc;n#employeeID#0;n#MainWindowController#0" expanded="false" />
+                <element signature="n#!!doc;n#empList#0;n#MainWindowController#0" expanded="false" />
+                <element signature="n#!!doc;n#agendaAnchor#0;n#MainWindowController#0" expanded="false" />
+                <element signature="n#!!doc;n#deviceID#0;n#MainWindowController#0" expanded="false" />
+                <element signature="n#!!doc;n#rfidTable#0;n#MainWindowController#0" expanded="false" />
+                <element signature="n#!!doc;n#MainWindowController#0;n#MainWindowController#0" expanded="false" />
+                <element signature="n#!!doc;n#initialize#0;n#MainWindowController#0" expanded="false" />
+                <element signature="e#3903#3911#0" expanded="true" />
+                <element signature="e#5824#5832#0" expanded="true" />
+                <element signature="e#5993#6001#0" expanded="true" />
+                <element signature="e#7237#7245#0" expanded="true" />
+                <element signature="e#8903#8904#0" expanded="true" />
+                <element signature="e#8948#8949#0" expanded="true" />
+                <element signature="e#10053#10054#0" expanded="true" />
+                <element signature="e#10098#10099#0" expanded="true" />
+                <element signature="e#10430#10446#0" expanded="true" />
+                <element signature="e#10728#10736#0" expanded="true" />
+                <element signature="n#!!doc;n#createEmployee#0;n#MainWindowController#0" expanded="false" />
+                <element signature="n#!!doc;n#displayEmployeeInformation#0;n#MainWindowController#0" expanded="false" />
+                <element signature="e#19188#19196#0" expanded="true" />
+                <element signature="n#!!doc;n#displayDeviceInformation#0;n#MainWindowController#0" expanded="false" />
+                <element signature="e#21689#21722#0" expanded="true" />
+                <element signature="n#!!doc;n#updateRFID#0;n#MainWindowController#0" expanded="false" />
+                <element signature="e#36302#36316#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="646">
-              <caret line="19" column="74" selection-start-line="19" selection-start-column="74" selection-end-line="19" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.7417453" vertical-offset="0" max-vertical-offset="848">
+              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -74,125 +117,30 @@
       <file leaf-file-name="DeviceDatabaseController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DatabaseManipulation/DeviceDatabaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1955">
-              <caret line="85" column="278" selection-start-line="85" selection-start-column="278" selection-end-line="85" selection-end-column="278" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1784" max-vertical-offset="2669">
+              <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
               <folding>
-                <marker date="1416858675173" expanded="true" signature="1012:1044" placeholder="SELECT * FRO..device..." />
-                <marker date="1416858675173" expanded="true" signature="1599:1631" placeholder="SELECT * FRO..device..." />
-                <marker date="1416858675173" expanded="true" signature="2148:2204" placeholder="SELECT * FRO..device..." />
-                <marker date="1416858675173" expanded="true" signature="2717:2737" placeholder="SELECT * FRO..device..." />
-                <marker date="1416858675173" expanded="true" signature="3346:3398" placeholder="SELECT * FRO..deviceactivationtimes..." />
-                <marker date="1416858675173" expanded="true" signature="3346:3399" placeholder="SELECT * FRO..deviceactivationtimes..." />
-                <marker date="1416858675173" expanded="true" signature="4046:4095" placeholder="SELECT * FRO..deviceusagehistory..." />
-                <marker date="1416858675173" expanded="true" signature="4046:4096" placeholder="SELECT * FRO..deviceusagehistory..." />
+                <marker date="1417391519462" expanded="true" signature="1024:1056" placeholder="SELECT * FRO..device..." />
+                <marker date="1417391519462" expanded="true" signature="1611:1643" placeholder="SELECT * FRO..device..." />
+                <marker date="1417391519462" expanded="true" signature="2160:2216" placeholder="SELECT * FRO..device..." />
+                <marker date="1417391519462" expanded="true" signature="2729:2749" placeholder="SELECT * FRO..device..." />
+                <marker date="1417391519462" expanded="true" signature="3358:3411" placeholder="SELECT * FRO..deviceactivationtimes..." />
+                <marker date="1417391519462" expanded="true" signature="4058:4108" placeholder="SELECT * FRO..deviceusagehistory..." />
+                <marker date="1417391519462" expanded="true" signature="5202:5633" placeholder="SELECT * FRO..deviceactivationtimes..." />
+                <marker date="1417391519462" expanded="true" signature="6248:6265" placeholder="SELECT * FRO..dev..." />
+                <marker date="1417391519462" expanded="true" signature="6248:6679" placeholder="SELECT * FRO..deviceactivationtimes..." />
+                <marker date="1417391519462" expanded="true" signature="6765:6804" placeholder="UPDATE devic..." />
+                <marker date="1417391519462" expanded="true" signature="6765:6805" placeholder="UPDATE devic..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWindowController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main/MainWindowController.java">
+      <file leaf-file-name="SerialClass.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ArduinoConnection/SerialClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70920247" vertical-offset="0" max-vertical-offset="815">
-              <caret line="588" column="0" selection-start-line="588" selection-start-column="0" selection-end-line="588" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc;n#deviceDatabaseController#0;n#MainWindowController#0" expanded="false" />
-                <element signature="n#!!doc;n#createEmployeeStage#0;n#MainWindowController#0" expanded="false" />
-                <element signature="n#!!doc;n#employeeID#0;n#MainWindowController#0" expanded="false" />
-                <element signature="n#!!doc;n#empList#0;n#MainWindowController#0" expanded="false" />
-                <element signature="n#!!doc;n#agenda#0;n#MainWindowController#0" expanded="false" />
-                <element signature="n#!!doc;n#deviceID#0;n#MainWindowController#0" expanded="false" />
-                <element signature="n#!!doc;n#MainWindowController#0;n#MainWindowController#0" expanded="false" />
-                <element signature="n#!!doc;n#initialize#0;n#MainWindowController#0" expanded="false" />
-                <element signature="n#!!doc;n#createEmployee#0;n#MainWindowController#0" expanded="false" />
-                <element signature="e#13071#13072#0" expanded="true" />
-                <element signature="e#13110#13111#0" expanded="true" />
-                <element signature="n#!!doc;n#displayEmployeeInformation#0;n#MainWindowController#0" expanded="false" />
-                <element signature="n#!!doc;n#displayDeviceInformation#0;n#MainWindowController#0" expanded="false" />
-                <element signature="n#!!doc;n#displayAgenda#0;n#MainWindowController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceactivationtimesEntity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Persistence/DeviceactivationtimesEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="capstoneDatabase.sql" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/capstoneDatabase.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="1343">
-              <caret line="72" column="119" selection-start-line="72" selection-start-column="119" selection-end-line="72" selection-end-column="119" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="442">
-              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateEmployee.fxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/fxml/CreateEmployee.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="493">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/DeviceController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1751" max-vertical-offset="1989">
-              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeDatabaseController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DatabaseManipulation/EmployeeDatabaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="3281">
-              <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
-              <folding>
-                <marker date="1416812247791" expanded="true" signature="1345:1379" placeholder="SELECT * FRO..employee..." />
-                <marker date="1416812247791" expanded="true" signature="1914:2449" placeholder="UPDATE emplo..." />
-                <marker date="1416812247791" expanded="true" signature="2914:2980" placeholder="UPDATE emplo..." />
-                <marker date="1416812247791" expanded="true" signature="3465:3499" placeholder="SELECT * FRO..employee..." />
-                <marker date="1416812247791" expanded="true" signature="4063:4123" placeholder="SELECT * FRO..employee..." />
-                <marker date="1416812247791" expanded="true" signature="4672:4730" placeholder="SELECT * FRO..employee..." />
-                <marker date="1416812247791" expanded="true" signature="5287:5346" placeholder="SELECT * FRO..employeerfidcard..." />
-                <marker date="1416812247791" expanded="true" signature="5287:5332" placeholder="SELECT * FRO..employeerfidcard..." />
-                <marker date="1416812247791" expanded="true" signature="6006:6028" placeholder="SELECT * FRO..employee..." />
-                <marker date="1416812247791" expanded="true" signature="6581:6643" placeholder="SELECT * FRO..employee..." />
-                <marker date="1416812247791" expanded="true" signature="7177:7201" placeholder="SELECT * FRO..department..." />
-                <marker date="1416812247791" expanded="true" signature="7755:7849" placeholder="SELECT * FRO..employee..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/EmployeeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3757" max-vertical-offset="4046">
-              <caret line="221" column="22" selection-start-line="221" selection-start-column="22" selection-end-line="221" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="2193">
+              <caret line="23" column="23" selection-start-line="15" selection-start-column="8" selection-end-line="23" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -208,16 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
-        <option value="$PROJECT_DIR$/src/PowerManagement/Main.java" />
-        <option value="$PROJECT_DIR$/src/PowerManagement/Controller.java" />
-        <option value="$PROJECT_DIR$/src/DatabaseManipulation/DeviceControllerTest.java" />
-        <option value="$PROJECT_DIR$/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/DatabaseManipulation/DeviceController.java" />
-        <option value="$PROJECT_DIR$/src/DatabaseManipulation/DatabaseController.java" />
-        <option value="$PROJECT_DIR$/src/Tests/RFIDControllerTest.java" />
         <option value="$PROJECT_DIR$/src/Tests/EmployeeControllerTest.java" />
         <option value="$PROJECT_DIR$/src/Tests/DeviceControllerTest.java" />
         <option value="$PROJECT_DIR$/src/ArduinoConnection/IRawDataObersvable.java" />
@@ -226,7 +164,6 @@
         <option value="$PROJECT_DIR$/src/ArduinoConnection/IOHandler.java" />
         <option value="$PROJECT_DIR$/src/ArduinoConnection/ArduinoConnectionTest.java" />
         <option value="$PROJECT_DIR$/src/ArduinoConnection/ArduinoConnection.java" />
-        <option value="$PROJECT_DIR$/src/ArduinoConnection/SerialClass.java" />
         <option value="$PROJECT_DIR$/src/Main/capstoneGUI.fxml" />
         <option value="$PROJECT_DIR$/src/Models/Department.java" />
         <option value="$PROJECT_DIR$/src/Models/RFID.java" />
@@ -239,27 +176,45 @@
         <option value="$PROJECT_DIR$/src/DatabaseManipulation/EmployeeController.java" />
         <option value="$PROJECT_DIR$/src/Main/fxml/CreateDevice.fxml" />
         <option value="$PROJECT_DIR$/src/Main/fxml/CreateRFID.fxml" />
-        <option value="$PROJECT_DIR$/src/Main/fxml/CreateEmployee.fxml" />
         <option value="$PROJECT_DIR$/src/Main/fxml/DeleteEmployee.fxml" />
         <option value="$PROJECT_DIR$/src/Main/RFIDController.java" />
-        <option value="$PROJECT_DIR$/src/Main/fxml/capstoneGUI.fxml" />
-        <option value="$PROJECT_DIR$/src/DatabaseManipulation/RFIDDatabaseController.java" />
-        <option value="$PROJECT_DIR$/src/DatabaseManipulation/EmployeeDatabaseController.java" />
         <option value="$PROJECT_DIR$/src/Main/EmployeeController.java" />
         <option value="$PROJECT_DIR$/src/Main/DeviceController.java" />
-        <option value="$PROJECT_DIR$/src/Main/Main.java" />
         <option value="$PROJECT_DIR$/src/capstoneDatabase.sql" />
         <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/DatabaseManipulation/DeviceDatabaseController.java" />
         <option value="$PROJECT_DIR$/src/Main/MainWindowController.java" />
+        <option value="$PROJECT_DIR$/src/Main/Controllers/Models/EmployeeRfid.java" />
+        <option value="$PROJECT_DIR$/src/Main/fxml/testCreateEmployee.fxml" />
+        <option value="$PROJECT_DIR$/src/Main/Controllers/Observers/IEmployeeObservable.java" />
+        <option value="$PROJECT_DIR$/src/Main/Controllers/Observers/IDeviceObservable.java" />
+        <option value="$PROJECT_DIR$/src/Main/Controllers/Observers/IDeviceObserver.java" />
+        <option value="$PROJECT_DIR$/src/Main/Controllers/Observers/IEmployeeObserver.java" />
+        <option value="$PROJECT_DIR$/src/Main/Controllers/Observers/IRFIDObserver.java" />
+        <option value="$PROJECT_DIR$/src/Main/Controllers/Observers/IRFIDObservable.java" />
+        <option value="$PROJECT_DIR$/src/Main/Static/Monitor.java" />
+        <option value="$PROJECT_DIR$/src/Main/EventMonitors/Monitor.java" />
+        <option value="$PROJECT_DIR$/src/Main/Controllers/RFIDController.java" />
+        <option value="$PROJECT_DIR$/src/Main/fxml/CreateEmployee.fxml" />
+        <option value="$PROJECT_DIR$/src/Main/Controllers/DepartmentController.java" />
+        <option value="$PROJECT_DIR$/src/Main/Controllers/DeviceController.java" />
+        <option value="$PROJECT_DIR$/src/DatabaseManipulation/EmployeeDatabaseController.java" />
+        <option value="$PROJECT_DIR$/src/Main/Controllers/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/Main/EventMonitors/WindowMonitor.java" />
+        <option value="$PROJECT_DIR$/src/ArduinoConnection/SerialClass.java" />
+        <option value="$PROJECT_DIR$/src/Models/EmployeeRfid.java" />
+        <option value="$PROJECT_DIR$/src/DatabaseManipulation/RFIDDatabaseController.java" />
+        <option value="$PROJECT_DIR$/src/Main/fxml/capstoneGUI.fxml" />
+        <option value="$PROJECT_DIR$/src/Main/Controllers/MainWindowController.java" />
+        <option value="$PROJECT_DIR$/src/DatabaseManipulation/DeviceDatabaseController.java" />
+        <option value="$PROJECT_DIR$/src/Main/Main.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="38" />
-    <option name="y" value="10" />
-    <option name="width" value="1226" />
+    <option name="x" value="-2" />
+    <option name="y" value="38" />
+    <option name="width" value="1139" />
     <option name="height" value="1019" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -290,8 +245,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -338,43 +291,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Tests" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Capstone-JeremyMalasics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Capstone-JeremyMalasics" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Persistence" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Capstone-JeremyMalasics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Capstone-JeremyMalasics" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
+              <option name="myItemId" value="Main" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -393,6 +310,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fxml" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone-JeremyMalasics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone-JeremyMalasics" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -434,6 +377,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -823,12 +768,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -849,6 +788,12 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="false" name="Main" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -867,12 +812,14 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Capstone-JeremyMalasics" />
       <envs />
+      <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -942,12 +889,19 @@
       <workItem from="1416582119601" duration="631000" />
       <workItem from="1416700212482" duration="2687000" />
       <workItem from="1416803857435" duration="20896000" />
-      <workItem from="1416885352784" duration="4876000" />
+      <workItem from="1416885352784" duration="20159000" />
+      <workItem from="1416978679219" duration="21596000" />
+      <workItem from="1417246467227" duration="2540000" />
+      <workItem from="1417251050103" duration="775000" />
+      <workItem from="1417251921770" duration="129000" />
+      <workItem from="1417254420647" duration="703000" />
+      <workItem from="1417255537899" duration="6427000" />
+      <workItem from="1417327055294" duration="20582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234562000" />
+    <option name="totallyTimeSpent" value="302597000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -970,33 +924,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="38" y="10" width="1226" height="1019" extended-state="1" />
+    <frame x="-2" y="38" width="1139" height="1019" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24957119" sideWeight="0.4296963" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16471216" sideWeight="0.4298056" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31646654" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3160981" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24957119" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45781776" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47356582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32508436" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3239595" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24957119" sideWeight="0.57030374" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5286839" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28637627" sideWeight="0.57019436" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50506186" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1024,7 +979,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="31" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/Controllers/RFIDController.java</url>
+          <line>102</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="43" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1032,161 +995,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DatabaseManipulation/EmployeeDatabaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="3281">
-          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
-          <folding>
-            <marker date="1416812247791" expanded="true" signature="1345:1379" placeholder="SELECT * FRO..employee..." />
-            <marker date="1416812247791" expanded="true" signature="1914:2449" placeholder="UPDATE emplo..." />
-            <marker date="1416812247791" expanded="true" signature="2914:2980" placeholder="UPDATE emplo..." />
-            <marker date="1416812247791" expanded="true" signature="3465:3499" placeholder="SELECT * FRO..employee..." />
-            <marker date="1416812247791" expanded="true" signature="4063:4123" placeholder="SELECT * FRO..employee..." />
-            <marker date="1416812247791" expanded="true" signature="4672:4730" placeholder="SELECT * FRO..employee..." />
-            <marker date="1416812247791" expanded="true" signature="5287:5346" placeholder="SELECT * FRO..employeerfidcard..." />
-            <marker date="1416812247791" expanded="true" signature="5287:5332" placeholder="SELECT * FRO..employeerfidcard..." />
-            <marker date="1416812247791" expanded="true" signature="6006:6028" placeholder="SELECT * FRO..employee..." />
-            <marker date="1416812247791" expanded="true" signature="6581:6643" placeholder="SELECT * FRO..employee..." />
-            <marker date="1416812247791" expanded="true" signature="7177:7201" placeholder="SELECT * FRO..department..." />
-            <marker date="1416812247791" expanded="true" signature="7755:7849" placeholder="SELECT * FRO..employee..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3757" max-vertical-offset="4046">
-          <caret line="221" column="22" selection-start-line="221" selection-start-column="22" selection-end-line="221" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="391">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="391">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="391">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="391">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/DeviceControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/RFIDControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/EmployeeControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="311" max-vertical-offset="1241">
-          <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArduinoConnection/IRawDataObersvable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArduinoConnection/IRawDataOberserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/hibernate-search-4.5.1.Final-dist/hibernate-search-4.5.1.Final/dist/lib/optional/hibernate-entitymanager-4.3.5.Final.jar!/org/hibernate/jpa/internal/TransactionImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.52" vertical-offset="102" max-vertical-offset="527">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/fxml/DeleteRFID.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="862">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/fxml/DeleteDevice.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="430">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/fxml/CreateRFID.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="15" column="128" selection-start-line="15" selection-start-column="128" selection-end-line="15" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/hibernate-search-4.5.1.Final-dist/hibernate-search-4.5.1.Final/dist/lib/optional/hibernate-entitymanager-4.3.5.Final.jar!/org/hibernate/jpa/internal/EntityManagerFactoryImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.48" vertical-offset="1274" max-vertical-offset="2431">
-          <caret line="84" column="19" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/hibernate-search-4.5.1.Final-dist/hibernate-search-4.5.1.Final/dist/lib/required/hibernate-core-4.3.5.Final.jar!/org/hibernate/engine/transaction/internal/jdbc/JdbcTransactionFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.36" vertical-offset="13" max-vertical-offset="425">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/hibernate-search-4.5.1.Final-dist/hibernate-search-4.5.1.Final/dist/lib/required/hibernate-core-4.3.5.Final.jar!/org/hibernate/engine/transaction/internal/TransactionCoordinatorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.48" vertical-offset="730" max-vertical-offset="1496">
-          <caret line="52" column="99" selection-start-line="52" selection-start-column="99" selection-end-line="52" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/hibernate-search-4.5.1.Final-dist/hibernate-search-4.5.1.Final/dist/lib/required/hibernate-core-4.3.5.Final.jar!/org/hibernate/engine/transaction/synchronization/internal/SynchronizationCallbackCoordinatorTrackingImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.24" vertical-offset="17" max-vertical-offset="442">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/hibernate-search-4.5.1.Final-dist/hibernate-search-4.5.1.Final/dist/lib/required/hibernate-core-4.3.5.Final.jar!/org/hibernate/internal/SessionFactoryImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.48" vertical-offset="3314" max-vertical-offset="5032">
@@ -1250,27 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/collections/ListChangeBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3906" max-vertical-offset="11713">
-          <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/collections/ObservableListBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2257" max-vertical-offset="3825">
-          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/collections/ModifiableObservableListBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1118" max-vertical-offset="5916">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/scene/control/ChoiceBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33261803" vertical-offset="508" max-vertical-offset="6698">
@@ -1282,43 +1069,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="408">
           <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/fxml/CreateDevice.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="6" column="107" selection-start-line="6" selection-start-column="107" selection-end-line="6" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArduinoConnection/SerialClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2193">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/RFIDController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="700" max-vertical-offset="1598">
-          <caret line="36" column="75" selection-start-line="36" selection-start-column="75" selection-end-line="36" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/fxml/capstoneGUI.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="4454">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseManipulation/RFIDDatabaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="2142">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1336,68 +1086,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseManipulation/EmployeeDatabaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1859" max-vertical-offset="3196">
-          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
-          <folding>
-            <marker date="1416812247791" expanded="true" signature="1345:1379" placeholder="SELECT * FRO..employee..." />
-            <marker date="1416812247791" expanded="true" signature="1914:2449" placeholder="UPDATE emplo..." />
-            <marker date="1416812247791" expanded="true" signature="2914:2980" placeholder="UPDATE emplo..." />
-            <marker date="1416812247791" expanded="true" signature="3465:3499" placeholder="SELECT * FRO..employee..." />
-            <marker date="1416812247791" expanded="true" signature="4063:4123" placeholder="SELECT * FRO..employee..." />
-            <marker date="1416812247791" expanded="true" signature="4672:4730" placeholder="SELECT * FRO..employee..." />
-            <marker date="1416812247791" expanded="true" signature="5287:5346" placeholder="SELECT * FRO..employeerfidcard..." />
-            <marker date="1416812247791" expanded="true" signature="5287:5332" placeholder="SELECT * FRO..employeerfidcard..." />
-            <marker date="1416812247791" expanded="true" signature="6006:6028" placeholder="SELECT * FRO..employee..." />
-            <marker date="1416812247791" expanded="true" signature="6581:6643" placeholder="SELECT * FRO..employee..." />
-            <marker date="1416812247791" expanded="true" signature="7177:7201" placeholder="SELECT * FRO..department..." />
-            <marker date="1416812247791" expanded="true" signature="7755:7849" placeholder="SELECT * FRO..employee..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/DeviceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="766" max-vertical-offset="1581">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <caret line="19" column="74" selection-start-line="19" selection-start-column="74" selection-end-line="19" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/fxml/CreateEmployee.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="493">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="3604">
-          <caret line="221" column="22" selection-start-line="221" selection-start-column="22" selection-end-line="221" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/capstoneDatabase.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="1343">
-          <caret line="72" column="119" selection-start-line="72" selection-start-column="119" selection-end-line="72" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="772" max-vertical-offset="1632">
+          <caret line="89" column="119" selection-start-line="89" selection-start-column="119" selection-end-line="89" selection-end-column="119" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
@@ -1408,51 +1104,331 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseManipulation/DeviceDatabaseController.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/application/Platform.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1062" max-vertical-offset="1904">
-          <caret line="85" column="278" selection-start-line="85" selection-start-column="278" selection-end-line="85" selection-end-column="278" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1989" max-vertical-offset="2397">
+          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/fxml/JavaFXBuilderFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="7157">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/collections/FXCollections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4655" max-vertical-offset="41310">
+          <caret line="351" column="0" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
           <folding>
-            <marker date="1416858675173" expanded="true" signature="1012:1044" placeholder="SELECT * FRO..device..." />
-            <marker date="1416858675173" expanded="true" signature="1599:1631" placeholder="SELECT * FRO..device..." />
-            <marker date="1416858675173" expanded="true" signature="2148:2204" placeholder="SELECT * FRO..device..." />
-            <marker date="1416858675173" expanded="true" signature="2717:2737" placeholder="SELECT * FRO..device..." />
-            <marker date="1416858675173" expanded="true" signature="3346:3398" placeholder="SELECT * FRO..deviceactivationtimes..." />
-            <marker date="1416858675173" expanded="true" signature="3346:3399" placeholder="SELECT * FRO..deviceactivationtimes..." />
-            <marker date="1416858675173" expanded="true" signature="4046:4095" placeholder="SELECT * FRO..deviceusagehistory..." />
-            <marker date="1416858675173" expanded="true" signature="4046:4096" placeholder="SELECT * FRO..deviceusagehistory..." />
+            <element signature="e#13469#13470#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Persistence/DeviceactivationtimesEntity.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/collections/MapChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1598">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/fxml/CreateDevice.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/fxml/CreateEmployee.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/MainWindowController.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/Controllers/DepartmentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70920247" vertical-offset="0" max-vertical-offset="815">
-          <caret line="588" column="0" selection-start-line="588" selection-start-column="0" selection-end-line="588" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="1581">
+          <caret line="104" column="9" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Controllers/DeviceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="989" max-vertical-offset="1632">
+          <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Controllers/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3131" max-vertical-offset="3740">
+          <caret line="232" column="29" selection-start-line="232" selection-start-column="29" selection-end-line="232" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/EventMonitors/WindowMonitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="1666">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="40819" max-vertical-offset="57120">
+          <caret line="2571" column="0" selection-start-line="2571" selection-start-column="0" selection-end-line="2571" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/EmployeeRfid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/scene/control/ComboBoxBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2161" max-vertical-offset="7276">
+          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DatabaseManipulation/EmployeeDatabaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3910">
+          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
           <folding>
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employee..." />
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="UPDATE emplo..." />
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="UPDATE emplo..." />
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employee..." />
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employee..." />
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employee..." />
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employeerfidcard..." />
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employee..." />
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employee..." />
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..department..." />
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employee..." />
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rfidusagehistory..." />
+            <marker date="1417250693038" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..department..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DatabaseManipulation/RFIDDatabaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="907" max-vertical-offset="2924">
+          <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+          <folding>
+            <marker date="1417258396252" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rfidcard..." />
+            <marker date="1417258396252" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employeerfidcard..." />
+            <marker date="1417258396252" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rfidcard..." />
+            <marker date="1417258396252" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rfidcard..." />
+            <marker date="1417258396252" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1417258396252" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rfidcard..." />
+            <marker date="1417258396252" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rfidcard..." />
+            <marker date="1417258396252" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employeerfidcard..." />
+            <marker date="1417258396252" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..employeerfidcard..." />
+            <marker date="1417258396252" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rfidcard..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SystemLog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="292590" max-vertical-offset="293488">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Controllers/RFIDController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1093" max-vertical-offset="1547">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/fxml/capstoneGUI.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4209" max-vertical-offset="4590">
+          <caret line="257" column="105" selection-start-line="257" selection-start-column="105" selection-end-line="257" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jfxtras/jfxtras-agenda/8.0-r2/jfxtras-agenda-8.0-r2.jar!/jfxtras/scene/control/agenda/Agenda.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.36" vertical-offset="631" max-vertical-offset="3910">
+          <caret line="46" column="94" selection-start-line="46" selection-start-column="94" selection-end-line="46" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/collections/ObservableListBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2729" max-vertical-offset="3859">
+          <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+          <folding>
+            <element signature="e#7418#7419#0" expanded="false" />
+            <element signature="e#7465#7466#0" expanded="false" />
+            <element signature="e#7871#7872#0" expanded="false" />
+            <element signature="e#7914#7915#0" expanded="false" />
+            <element signature="e#8252#8253#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/collections/ModifiableObservableListBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="5916">
+          <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/com/sun/glass/ui/win/WinApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="995" max-vertical-offset="3842">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/com/sun/glass/ui/InvokeLaterDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="2941">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/com/sun/javafx/application/PlatformImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4267" max-vertical-offset="11832">
+          <caret line="322" column="0" selection-start-line="322" selection-start-column="0" selection-end-line="322" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="12963" max-vertical-offset="15810">
+          <caret line="820" column="0" selection-start-line="820" selection-start-column="0" selection-end-line="820" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jfxtras/jfxtras-agenda/8.0-r2/jfxtras-agenda-8.0-r2.jar!/jfxtras/internal/scene/control/skin/agenda/AgendaWeekSkin.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.72" vertical-offset="1888" max-vertical-offset="3281">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/com/sun/javafx/collections/ListListenerHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="621" max-vertical-offset="5236">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/javafx-src.zip!/javafx/collections/ListChangeBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7472" max-vertical-offset="11713">
+          <caret line="481" column="0" selection-start-line="481" selection-start-column="0" selection-end-line="481" selection-end-column="0" />
+          <folding>
+            <element signature="e#19608#19609#0" expanded="false" />
+            <element signature="e#19636#19637#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DatabaseManipulation/DeviceDatabaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1784" max-vertical-offset="2669">
+          <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
+          <folding>
+            <marker date="1417391519462" expanded="true" signature="1024:1056" placeholder="SELECT * FRO..device..." />
+            <marker date="1417391519462" expanded="true" signature="1611:1643" placeholder="SELECT * FRO..device..." />
+            <marker date="1417391519462" expanded="true" signature="2160:2216" placeholder="SELECT * FRO..device..." />
+            <marker date="1417391519462" expanded="true" signature="2729:2749" placeholder="SELECT * FRO..device..." />
+            <marker date="1417391519462" expanded="true" signature="3358:3411" placeholder="SELECT * FRO..deviceactivationtimes..." />
+            <marker date="1417391519462" expanded="true" signature="4058:4108" placeholder="SELECT * FRO..deviceusagehistory..." />
+            <marker date="1417391519462" expanded="true" signature="5202:5633" placeholder="SELECT * FRO..deviceactivationtimes..." />
+            <marker date="1417391519462" expanded="true" signature="6248:6265" placeholder="SELECT * FRO..dev..." />
+            <marker date="1417391519462" expanded="true" signature="6248:6679" placeholder="SELECT * FRO..deviceactivationtimes..." />
+            <marker date="1417391519462" expanded="true" signature="6765:6804" placeholder="UPDATE devic..." />
+            <marker date="1417391519462" expanded="true" signature="6765:6805" placeholder="UPDATE devic..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Controllers/MainWindowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4184" max-vertical-offset="5185">
+          <caret line="768" column="99" selection-start-line="768" selection-start-column="99" selection-end-line="768" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#deviceDatabaseController#0;n#MainWindowController#0" expanded="false" />
             <element signature="n#!!doc;n#createEmployeeStage#0;n#MainWindowController#0" expanded="false" />
             <element signature="n#!!doc;n#employeeID#0;n#MainWindowController#0" expanded="false" />
             <element signature="n#!!doc;n#empList#0;n#MainWindowController#0" expanded="false" />
-            <element signature="n#!!doc;n#agenda#0;n#MainWindowController#0" expanded="false" />
+            <element signature="n#!!doc;n#agendaAnchor#0;n#MainWindowController#0" expanded="false" />
             <element signature="n#!!doc;n#deviceID#0;n#MainWindowController#0" expanded="false" />
+            <element signature="n#!!doc;n#rfidTable#0;n#MainWindowController#0" expanded="false" />
             <element signature="n#!!doc;n#MainWindowController#0;n#MainWindowController#0" expanded="false" />
             <element signature="n#!!doc;n#initialize#0;n#MainWindowController#0" expanded="false" />
+            <element signature="e#3903#3911#0" expanded="true" />
+            <element signature="e#5824#5832#0" expanded="true" />
+            <element signature="e#5993#6001#0" expanded="true" />
+            <element signature="e#7237#7245#0" expanded="true" />
+            <element signature="e#8903#8904#0" expanded="true" />
+            <element signature="e#8948#8949#0" expanded="true" />
+            <element signature="e#10053#10054#0" expanded="true" />
+            <element signature="e#10098#10099#0" expanded="true" />
+            <element signature="e#10430#10446#0" expanded="true" />
+            <element signature="e#10728#10736#0" expanded="true" />
             <element signature="n#!!doc;n#createEmployee#0;n#MainWindowController#0" expanded="false" />
-            <element signature="e#13071#13072#0" expanded="true" />
-            <element signature="e#13110#13111#0" expanded="true" />
             <element signature="n#!!doc;n#displayEmployeeInformation#0;n#MainWindowController#0" expanded="false" />
+            <element signature="e#19188#19196#0" expanded="true" />
             <element signature="n#!!doc;n#displayDeviceInformation#0;n#MainWindowController#0" expanded="false" />
-            <element signature="n#!!doc;n#displayAgenda#0;n#MainWindowController#0" expanded="false" />
+            <element signature="e#21689#21722#0" expanded="true" />
+            <element signature="n#!!doc;n#updateRFID#0;n#MainWindowController#0" expanded="false" />
+            <element signature="e#36302#36316#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArduinoConnection/SerialClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="2193">
+          <caret line="23" column="23" selection-start-line="15" selection-start-column="8" selection-end-line="23" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7417453" vertical-offset="0" max-vertical-offset="848">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,7 +1499,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.jfxtras:jfxtras-agenda:8.0-r2</last-edited>
+          <last-edited>org.jfxtras:jfxtras-controls:8.0-r3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

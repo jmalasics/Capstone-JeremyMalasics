@@ -29,12 +29,17 @@
       <column name="totalUsage" sqlType="DECIMAL" precision="10" scale="0" nullable="false" jdbcType="3"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="deviceActivationTimes_foreign_1" table="deviceactivationtimes" schema="" catalog="capstonejeremymalasics" columns="deviceID"/>
+      <exported-key name="rfidUsageHistory_foreign_key_3" table="rfidusagehistory" schema="" catalog="capstonejeremymalasics" columns="device"/>
+      <index name="device" unique="true" columns="device"/>
     </table>
     <table name="deviceactivationtimes" schema="" catalog="capstonejeremymalasics" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="deviceID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="activationTime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
       <column name="disableTime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="summary" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="groupName" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="deviceActivationTimes_foreign_1" columns="deviceID" ref-table="device" ref-schema="" ref-catalog="capstonejeremymalasics" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="deviceID" unique="true" columns="activationTime"/>
@@ -56,6 +61,7 @@
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="employee_foreign_key_1" columns="department" ref-table="department" ref-schema="" ref-catalog="capstonejeremymalasics" ref-columns="department" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="employeeRFIDCard_foreign_key_2" table="employeerfidcard" schema="" catalog="capstonejeremymalasics" columns="empId"/>
+      <exported-key name="rfidUsageHistory_foreign_key_1" table="rfidusagehistory" schema="" catalog="capstonejeremymalasics" columns="employeeID"/>
       <index name="firstName" unique="true" columns="firstName,lastName"/>
       <index name="employee_foreign_key_1" unique="false" columns="department"/>
     </table>
@@ -73,7 +79,22 @@
       <column name="rfidCode" sqlType="CHAR" precision="10" scale="0" nullable="false" jdbcType="1"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="employeeRFIDCard_foreign_key_1" table="employeerfidcard" schema="" catalog="capstonejeremymalasics" columns="rfid"/>
+      <exported-key name="rfidUsageHistory_foreign_key_2" table="rfidusagehistory" schema="" catalog="capstonejeremymalasics" columns="rfidCode"/>
       <index name="rfidCode" unique="true" columns="rfidCode"/>
+    </table>
+    <table name="rfidusagehistory" schema="" catalog="capstonejeremymalasics" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="employeeID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="rfidCode" sqlType="CHAR" precision="10" scale="0" nullable="false" jdbcType="1"/>
+      <column name="device" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12"/>
+      <column name="timeUsed" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="rfidUsageHistory_foreign_key_1" columns="employeeID" ref-table="employee" ref-schema="" ref-catalog="capstonejeremymalasics" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="rfidUsageHistory_foreign_key_2" columns="rfidCode" ref-table="rfidcard" ref-schema="" ref-catalog="capstonejeremymalasics" ref-columns="rfidCode" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="rfidUsageHistory_foreign_key_3" columns="device" ref-table="device" ref-schema="" ref-catalog="capstonejeremymalasics" ref-columns="device" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="employeeID" unique="true" columns="timeUsed"/>
+      <index name="rfidCode" unique="true" columns="timeUsed"/>
+      <index name="rfidUsageHistory_foreign_key_3" unique="false" columns="device"/>
     </table>
     <table name="fantasyteamplayers" schema="" catalog="fantasyfootball" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>

@@ -11,7 +11,7 @@ import java.util.Date;
  * Created by jmalasics on 10/27/2014.
  */
 public class SerialClass {
-
+/**
     public static void main(String[] args) {
         SerialClass serial = new SerialClass();
         serial.initialize();
@@ -23,7 +23,7 @@ public class SerialClass {
         }
         serial.close();
     }
-
+*/
     public SerialPort serialPort;
     private static final String PORT_NAME = "COM5";
     public static final int TIME_OUT = 2000;

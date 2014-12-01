@@ -24,7 +24,7 @@ CREATE TABLE EmployeeRFIDCard (id INT PRIMARY KEY AUTO_INCREMENT,
 								CONSTRAINT employeeRFIDCard_foreign_key_2 FOREIGN KEY (empId) REFERENCES Employee (id)
 );
 CREATE TABLE Device (id INT PRIMARY KEY AUTO_INCREMENT,
-						device VARCHAR(25) NOT NULL,
+						device VARCHAR(25) NOT NULL UNIQUE,
 						totalUsage DECIMAL NOT NULL
 );
 CREATE TABLE DeviceUsageHistory (id INT PRIMARY KEY AUTO_INCREMENT,
@@ -38,6 +38,17 @@ CREATE TABLE DeviceActivationTimes (id INT PRIMARY KEY AUTO_INCREMENT,
 					disableTime DATETIME NOT NULL,
 					UNIQUE (deviceID, activationTime),
 					CONSTRAINT deviceActivationTimes_foreign_1 FOREIGN KEY (deviceID) REFERENCES Device (id)
+);
+CREATE TABLE RFIDUsageHistory (id INT PRIMARY KEY AUTO_INCREMENT,
+					employeeID INT NOT NULL,
+					rfidCode CHAR(10) NOT NULL,
+					device VARCHAR(25) NOT NULL,
+					timeUsed DATETIME NOT NULL,
+					UNIQUE(employeeID, timeUsed),
+					UNIQUE(rfidCode, timeUsed),
+					CONSTRAINT rfidUsageHistory_foreign_key_1 FOREIGN KEY (employeeID) REFERENCES Employee (id),
+					CONSTRAINT rfidUsageHistory_foreign_key_2 FOREIGN KEY (rfidCode) REFERENCES RFIDCard (rfidCode),
+					CONSTRAINT rfidUsageHistory_foreign_key_3 FOREIGN KEY (device) REFERENCES Device (device)
 );
 INSERT INTO Department (department) VALUES ("Management");
 INSERT INTO Department (department) VALUES ("Computer Science");
@@ -71,4 +82,10 @@ INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES
 INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES (1, "2014-11-26 12:00:00", "2014-11-26 15:00:00");
 INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES (2, "2014-11-26 12:00:00", "2014-11-26 15:00:00");
 INSERT INTO DeviceActivationTimes (deviceID, activationTime, disableTime) VALUES (3, "2014-11-26 12:00:00", "2014-11-26 15:00:00");
-								
+INSERT INTO RFIDUsageHistory (employeeID, rfidCode, device, timeUsed) VALUES (1, "0100763FC5", "ROOM202_RFID", "2014-11-23 01:00:00");	
+INSERT INTO RFIDUsageHistory (employeeID, rfidCode, device, timeUsed) VALUES (1, "0100763FC5", "ROOM202_RFID", "2014-11-23 03:00:00");
+INSERT INTO RFIDUsageHistory (employeeID, rfidCode, device, timeUsed) VALUES (1, "010077A2A7", "ROOM202_RFID", "2014-11-24 13:00:00");
+INSERT INTO RFIDUsageHistory (employeeID, rfidCode, device, timeUsed) VALUES (1, "010077A2A7", "ROOM202_RFID", "2014-11-24 15:00:00");
+INSERT INTO RFIDUsageHistory (employeeID, rfidCode, device, timeUsed) VALUES (2, "01007687A5", "ROOM202_RFID", "2014-11-24 01:00:10");
+INSERT INTO RFIDUsageHistory (employeeID, rfidCode, device, timeUsed) VALUES (2, "01007687A5", "ROOM202_RFID", "2014-11-24 01:30:41");
+INSERT INTO RFIDUsageHistory (employeeID, rfidCode, device, timeUsed) VALUES (6, "0100763FC5", "ROOM202_RFID", "2014-11-24 11:00:00");							

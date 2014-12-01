@@ -2,6 +2,7 @@ package DatabaseManipulation;
 
 import Persistence.*;
 
+import javax.persistence.NoResultException;
 import java.util.List;
 
 /**
@@ -27,7 +28,7 @@ public class RFIDDatabaseController extends DatabaseController {
         }
     }
 
-    public boolean addRFIDCard(char[] rfidCode, int employeeId) {
+    public EmployeerfidcardEntity addRFIDCard(char[] rfidCode, int employeeId) {
         try {
             String code = new String(rfidCode);
             entityManager().getTransaction().begin();
@@ -36,11 +37,11 @@ public class RFIDDatabaseController extends DatabaseController {
             employeerfidcardEntity.setRfid(code);
             entityManager().persist(employeerfidcardEntity);
             entityManager().getTransaction().commit();
-            return true;
+            return employeerfidcardEntity;
         } catch(Exception e) {
             e.printStackTrace();
             entityManager().getTransaction().rollback();
-            return false;
+            return null;
         }
     }
 
@@ -61,11 +62,31 @@ public class RFIDDatabaseController extends DatabaseController {
     }
 
     public boolean removeRFIDCard(char[] rfidCode) {
+        String code = new String(rfidCode);
         try {
-            String code = new String(rfidCode);
             entityManager().getTransaction().begin();
-            entityManager().createNativeQuery("DELETE FROM rfidcard WHERE rfidCode = " + code);
-            entityManager().createNativeQuery("DELETE FROM employeerfidcard WHERE rfid = " + code);
+            EmployeerfidcardEntity employeerfidcardEntity = (EmployeerfidcardEntity) entityManager().createNativeQuery("SELECT * FROM employeerfidcard WHERE rfid = '" + code + "'", EmployeerfidcardEntity.class).getSingleResult();
+            entityManager().remove(employeerfidcardEntity);
+            RfidcardEntity rfidcardEntity = (RfidcardEntity) entityManager().createNativeQuery("SELECT * FROM rfidcard WHERE rfidCode = '" + code + "'", RfidcardEntity.class).getSingleResult();
+            entityManager().remove(rfidcardEntity);
+            entityManager().getTransaction().commit();
+            return true;
+        } catch(NoResultException nre) {
+            RfidcardEntity rfidcardEntity = (RfidcardEntity) entityManager().createNativeQuery("SELECT * FROM rfidcard WHERE rfidCode = '" + code + "'", RfidcardEntity.class).getSingleResult();
+            entityManager().remove(rfidcardEntity);
+            entityManager().getTransaction().commit();
+            return true;
+        } catch(Exception e) {
+            e.printStackTrace();
+            entityManager().getTransaction().rollback();
+            return false;
+        }
+    }
+
+    public boolean removeRFIDFromEmployee(int employeeId) {
+        try {
+            entityManager().getTransaction().begin();
+            entityManager().createNativeQuery("DELETE FROM employeerfidcard WHERE empId = " + employeeId);
             entityManager().getTransaction().commit();
             return true;
         } catch(Exception e) {
@@ -119,6 +140,32 @@ public class RFIDDatabaseController extends DatabaseController {
             entityManager().getTransaction().rollback();
             return false;
         }
+    }
+
+    public List<EmployeerfidcardEntity> getRFIDList() {
+        try {
+            entityManager().getTransaction().begin();
+            List<EmployeerfidcardEntity> employeerfidcardEntities = (List<EmployeerfidcardEntity>) entityManager().createNativeQuery("SELECT * FROM employeerfidcard", EmployeerfidcardEntity.class).getResultList();
+            List<RfidcardEntity> rfidcardEntities = (List<RfidcardEntity>) entityManager().createNativeQuery("SELECT * FROM rfidcard", RfidcardEntity.class).getResultList();
+            entityManager().getTransaction().commit();
+            employeerfidcardEntities = addFreeRFIDs(employeerfidcardEntities, rfidcardEntities);
+            return employeerfidcardEntities;
+        } catch(Exception e) {
+            e.printStackTrace();
+            entityManager().getTransaction().rollback();
+            return null;
+        }
+    }
+
+    private List<EmployeerfidcardEntity> addFreeRFIDs(List<EmployeerfidcardEntity> takenRfids, List<RfidcardEntity> allRfids) {
+        for(RfidcardEntity rfidcardEntity : allRfids) {
+            if(!isRFIDTaken(rfidcardEntity.getRfidCode())) {
+                EmployeerfidcardEntity employeerfidcardEntity = new EmployeerfidcardEntity();
+                employeerfidcardEntity.setRfid(rfidcardEntity.getRfidCode());
+                takenRfids.add(employeerfidcardEntity);
+            }
+        }
+        return takenRfids;
     }
 
 }

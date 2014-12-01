@@ -12,18 +12,18 @@ public class DeviceDatabaseController extends DatabaseController {
         super(persistenceUnit);
     }
 
-    public boolean addDevice(String device) {
+    public DeviceEntity addDevice(String device) {
         try {
             entityManager().getTransaction().begin();
             DeviceEntity deviceEntity = new DeviceEntity();
             deviceEntity.setDevice(device);
             entityManager().persist(deviceEntity);
             entityManager().getTransaction().commit();
-            return true;
+            return deviceEntity;
         } catch(Exception e) {
             e.printStackTrace();
             entityManager().getTransaction().rollback();
-            return false;
+            return null;
         }
     }
 
@@ -103,6 +103,51 @@ public class DeviceDatabaseController extends DatabaseController {
             e.printStackTrace();
             entityManager().getTransaction().rollback();
             return null;
+        }
+    }
+
+    public boolean addAppointment(DeviceactivationtimesEntity deviceactivationtimesEntity) {
+        try {
+            entityManager().getTransaction().begin();
+            entityManager().persist(deviceactivationtimesEntity);
+            entityManager().getTransaction().commit();
+            return true;
+        } catch(Exception e) {
+            e.printStackTrace();
+            entityManager().getTransaction().rollback();
+            return false;
+        }
+    }
+
+    public boolean removeAppointment(DeviceactivationtimesEntity deviceactivationtimesEntity) {
+        try {
+            entityManager().getTransaction().begin();
+            DeviceactivationtimesEntity appointment = (DeviceactivationtimesEntity) entityManager().createNativeQuery("SELECT * FROM deviceactivationtimes WHERE summary = '" +
+                                                                                                                                deviceactivationtimesEntity.getSummary() + "' AND description = '" +
+                                                                                                                                deviceactivationtimesEntity.getDescription() + "'", DeviceactivationtimesEntity.class);
+            entityManager().remove(appointment);
+            entityManager().getTransaction().commit();
+            return true;
+        } catch(Exception e) {
+            e.printStackTrace();
+            entityManager().getTransaction().rollback();
+            return false;
+        }
+    }
+
+    public boolean updateAppointment(DeviceactivationtimesEntity deviceactivationtimesEntity) {
+        try {
+            entityManager().getTransaction().begin();
+            DeviceactivationtimesEntity appointment = (DeviceactivationtimesEntity) entityManager().createNativeQuery("SELECT * FROM deviceactivationtimes WHERE summary = '" +
+                                                                                                                                deviceactivationtimesEntity.getSummary() + "' AND description = '" +
+                                                                                                                                deviceactivationtimesEntity.getDescription() + "'", DeviceactivationtimesEntity.class);
+            entityManager().createNativeQuery("UPDATE deviceactivationtimes WHERE id = " + appointment.getId());
+            entityManager().getTransaction().commit();
+            return true;
+        } catch(Exception e) {
+            e.printStackTrace();
+            entityManager().getTransaction().rollback();
+            return false;
         }
     }
 

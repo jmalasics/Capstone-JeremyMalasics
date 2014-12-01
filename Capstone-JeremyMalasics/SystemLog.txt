@@ -17244,3 +17244,15 @@
 [Mon Nov 17 14:20:01 MST 2014] RFID VALID: 010077A2A7
 [Mon Nov 17 14:31:51 MST 2014] System initializing...
 [Mon Nov 17 14:31:55 MST 2014] System initialized.
+[Sat Nov 29 03:20:47 MST 2014] RFID removed... RFID: 0683AD81C2
+[Sat Nov 29 03:24:25 MST 2014] RFID removed... RFID: 0683AD81C2
+[Sat Nov 29 03:32:49 MST 2014] RFID removed... RFID: 0683AD81C2
+[Sat Nov 29 03:33:17 MST 2014] RFID removed... RFID: 0683AD81C2
+[Sat Nov 29 03:33:42 MST 2014] RFID removed... RFID: 057D3AC567
+[Sat Nov 29 03:37:18 MST 2014] RFID removed... RFID: 0683AD81C2
+[Sat Nov 29 03:51:24 MST 2014] RFID removed... RFID: 0683AD81C2
+[Sat Nov 29 03:53:35 MST 2014] RFID removed... RFID: 0683AD81C2
+[Sat Nov 29 04:00:59 MST 2014] Department created... Department Name: Test Department
+[Sat Nov 29 04:03:38 MST 2014] Department removed... Department Name: Test Department
+[Sat Nov 29 04:06:46 MST 2014] Department created... Department Name: Test Department
+[Sat Nov 29 04:06:55 MST 2014] Department removed... Department Name: Test Department

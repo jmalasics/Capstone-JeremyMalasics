@@ -8,7 +8,8 @@
 
 <!-- <?import jfxtras.scene.control.agenda.*?> -->
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.MainWindowController">
+<?import jfxtras.scene.control.agenda.Agenda?>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controllers.MainWindowController">
   <tabs>
     <Tab text="Employee">
       <content>
@@ -96,16 +97,23 @@
                                                 <Font size="14.0" />
                                              </font>
                                           </Button>
+                                          <Button layoutX="39.0" layoutY="188.0" mnemonicParsing="false" onAction="#createDepartment" text="Create Department" />
+                                          <Button layoutX="194.0" layoutY="188.0" mnemonicParsing="false" onAction="#removeDepartment" text="Remove Department" />
+                                          <Text fx:id="employeeUpdated" layoutX="401.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Updated!" visible="false">
+                                             <font>
+                                                <Font name="System Italic" size="16.0" />
+                                             </font>
+                                          </Text>
                                        </children>
                                     </AnchorPane>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                        <children>
-                                          <TableView fx:id="EmpHistory" layoutX="154.0" layoutY="40.0" prefHeight="280.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                          <TableView fx:id="empHistory" layoutX="154.0" layoutY="40.0" prefHeight="280.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                             <columns>
-                                              <TableColumn prefWidth="81.0" text="Employee ID" />
-                                              <TableColumn prefWidth="112.0" text="RFID Code" />
-                                                <TableColumn prefWidth="90.0" text="Device" />
-                                                <TableColumn prefWidth="271.0" text="Time" />
+                                              <TableColumn fx:id="empID" prefWidth="81.0" text="Employee ID" />
+                                              <TableColumn fx:id="rfidCode" prefWidth="112.0" text="RFID Code" />
+                                                <TableColumn fx:id="device" prefWidth="90.0" text="Device" />
+                                                <TableColumn fx:id="loggedTime" prefWidth="309.0" text="Time" />
                                             </columns>
                                           </TableView>
                                        </children>
@@ -134,12 +142,12 @@
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
-                              <TableView prefHeight="571.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TableView fx:id="rfidTable" prefHeight="571.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columns>
-                                  <TableColumn prefWidth="209.0" text="RFID" />
-                                  <TableColumn prefWidth="238.0" text="Employee ID" />
-                                    <TableColumn prefWidth="168.0" text="First" />
-                                    <TableColumn prefWidth="183.0" text="Last" />
+                                  <TableColumn fx:id="rfidColumn" prefWidth="209.0" text="RFID" />
+                                  <TableColumn fx:id="employeeColumn" prefWidth="238.0" text="Employee ID" />
+                                    <TableColumn fx:id="firstNameColumn" prefWidth="168.0" text="First" />
+                                    <TableColumn fx:id="lastNameColumn" prefWidth="183.0" text="Last" />
                                 </columns>
                               </TableView>
                            </children>
@@ -247,8 +255,8 @@
     </Tab>
       <Tab text="Calendar">
         <content>
-          <AnchorPane fx:id="agendaAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-            <!-- <Agenda fx:id="agenda" minHeight="180.0" minWidth="200.0" prefHeight="180.0" prefWidth="200.0" /> -->
+          <AnchorPane fx:id="agendaAnchor" minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="800.0">
+                <!--<Agenda fx:id="agenda" maxHeight="180.0" maxWidth="200.0" prefHeight="180.0" prefWidth="200.0" />-->
           </AnchorPane>
         </content>
       </Tab>
