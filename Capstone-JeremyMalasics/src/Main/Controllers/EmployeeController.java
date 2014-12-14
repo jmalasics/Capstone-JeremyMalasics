@@ -20,6 +20,9 @@ import javafx.scene.control.TextField;
 import javafx.util.StringConverter;
 
 import java.net.URL;
+import java.sql.Date;
+import java.time.Instant;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -218,7 +221,8 @@ public class EmployeeController implements Initializable {
     public void buildEmployee() {
         String first = firstName.getText();
         String last = lastName.getText();
-        java.util.Date date = new java.util.Date(dateHired.getValue().toEpochDay());
+        Instant instant = dateHired.getValue().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
+        java.util.Date date = Date.from(instant);
         java.sql.Date sqlDate = new java.sql.Date(date.getTime());
         String department = this.department.getValue();
         String title = jobTitle.getText();

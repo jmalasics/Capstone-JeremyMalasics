@@ -60,14 +60,14 @@ public class SerialClass {
 
     public void readData() {
         try {
-            String data = serialPort.readString(41);
+            String data = serialPort.readString(44);
             if(data != null) {
                 String[] splitData = data.split(": ");
-                if (splitData[0].equals("TAG")) {
+                if (splitData[0].contains("TAG")) {
                     String[] code = splitData[1].split("  ");
                     validateRFID(code[0]);
-                } else if (splitData[0].equals("LOG")) {
-                    writeToLog(splitData[1]);
+                } else if (splitData[0].contains("LOG")) {
+                    writeToLog(splitData[splitData.length - 1]);
                 } else {
                     writeToLog("ERROR. Invalid response received.");
                     running = false;

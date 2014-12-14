@@ -29,10 +29,17 @@ public class RFIDDatabaseController extends DatabaseController {
     }
 
     public EmployeerfidcardEntity addRFIDCard(char[] rfidCode, int employeeId) {
+        EmployeerfidcardEntity employeerfidcardEntity;
+        String code = new String(rfidCode);
         try {
-            String code = new String(rfidCode);
             entityManager().getTransaction().begin();
-            EmployeerfidcardEntity employeerfidcardEntity = new EmployeerfidcardEntity();
+            employeerfidcardEntity = (EmployeerfidcardEntity) entityManager().createNativeQuery("SELECT * FROM employeerfidcard WHERE empId = " + employeeId, EmployeerfidcardEntity.class).getSingleResult();
+            employeerfidcardEntity.setRfid(code);
+            entityManager().merge(employeerfidcardEntity);
+            entityManager().getTransaction().commit();
+            return employeerfidcardEntity;
+        } catch(NoResultException nre) {
+            employeerfidcardEntity = new EmployeerfidcardEntity();
             employeerfidcardEntity.setEmpId(employeeId);
             employeerfidcardEntity.setRfid(code);
             entityManager().persist(employeerfidcardEntity);
@@ -86,8 +93,12 @@ public class RFIDDatabaseController extends DatabaseController {
     public boolean removeRFIDFromEmployee(int employeeId) {
         try {
             entityManager().getTransaction().begin();
-            entityManager().createNativeQuery("DELETE FROM employeerfidcard WHERE empId = " + employeeId);
+            EmployeerfidcardEntity employeerfidcardEntity = (EmployeerfidcardEntity) entityManager().createNativeQuery("SELECT * FROM employeerfidcard WHERE empId = " + employeeId, EmployeerfidcardEntity.class).getSingleResult();
+            entityManager().remove(employeerfidcardEntity);
             entityManager().getTransaction().commit();
+            return true;
+        } catch(NoResultException nre) {
+            entityManager().getTransaction().rollback();
             return true;
         } catch(Exception e) {
             e.printStackTrace();

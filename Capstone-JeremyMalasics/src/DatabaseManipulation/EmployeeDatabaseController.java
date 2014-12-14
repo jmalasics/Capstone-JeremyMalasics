@@ -50,12 +50,7 @@ public class EmployeeDatabaseController extends DatabaseController {
     public boolean modifyEmployee(EmployeeEntity employeeEntity) {
         try {
             entityManager().getTransaction().begin();
-            entityManager().createNativeQuery("UPDATE employee SET firstName = " + employeeEntity.getFirstName() +
-                                                " AND lastName = " + employeeEntity.getLastName() +
-                                                " AND dateHired = " + employeeEntity.getDateHired() +
-                                                " AND department = " + employeeEntity.getDepartment() +
-                                                " AND jobTitle = " + employeeEntity.getJobTitle() +
-                                                " WHERE id = " + employeeEntity.getId());
+            entityManager().merge(employeeEntity);
             entityManager().getTransaction().commit();
             return true;
         } catch(Exception e) {

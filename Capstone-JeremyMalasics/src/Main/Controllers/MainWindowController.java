@@ -30,7 +30,9 @@ import jfxtras.scene.control.agenda.Agenda;
 import java.net.URL;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -105,8 +107,6 @@ public class MainWindowController implements Initializable {
     private Text deviceID;
     @FXML
     private Text deviceName;
-    @FXML
-    private Text totalUsage;
     @FXML
     private TableView<DeviceactivationtimesEntity> activationTimes;
     @FXML
@@ -291,7 +291,9 @@ public class MainWindowController implements Initializable {
         }
         ObservableList<String> observableList = FXCollections.observableList(rfidCardStrings);
         RFID.getItems().add("");
-        RFID.setItems(observableList);
+        RFID.getItems().addAll(observableList);
+        RFID.setValue("");
+        RFID.getSelectionModel().select("");
     }
     //endregion
 
@@ -415,10 +417,7 @@ public class MainWindowController implements Initializable {
         employeeID.setVisible(true);
         firstName.setText(employeeEntity.getFirstName());
         lastName.setText(employeeEntity.getLastName());
-        Date date = employeeEntity.getDateHired();
-        //Instant instant = date.toInstant();
-        //LocalDate localDate = instant.atZone(ZoneId.systemDefault()).toLocalDate();
-        LocalDate localDate = LocalDate.now();
+        LocalDate localDate = employeeEntity.getDateHired().toLocalDate();
         this.dateHired.setValue(localDate);
         department.getSelectionModel().select(employeeEntity.getDepartment());
         department.setValue(employeeEntity.getDepartment());
@@ -442,16 +441,23 @@ public class MainWindowController implements Initializable {
             employeeEntity.setId(Integer.parseInt(employeeID.getText()));
             employeeEntity.setFirstName(firstName.getText());
             employeeEntity.setLastName(lastName.getText());
-            java.util.Date date = new java.util.Date(dateHired.getValue().toEpochDay());
+            Instant instant = dateHired.getValue().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
+            java.util.Date date = Date.from(instant);
             employeeEntity.setDateHired(new java.sql.Date(date.getTime()));
             employeeEntity.setDepartment(department.getValue());
             employeeEntity.setJobTitle(jobTitle.getText());
-            if(!RFID.getValue().isEmpty()) {
+            if(RFID.getValue() != null && RFID.getValue().length() == 10) {
                 RfidcardEntity rfidcardEntity = rfidDatabaseController.getRFIDCard(RFID.getValue().toCharArray());
                 rfidDatabaseController.addRFIDCard(rfidcardEntity.getRfidCode().toCharArray(), employeeEntity.getId());
+            } else {
+                EmployeerfidcardEntity employeerfidcardEntity = employeeDatabaseController.getEmployeeRFIDCard(Integer.parseInt(employeeID.getText()));
+                rfidDatabaseController.removeRFIDFromEmployee(Integer.parseInt(employeeID.getText()));
+                updateRFID(employeerfidcardEntity.getRfid());
             }
             employeeDatabaseController.modifyEmployee(employeeEntity);
             updateEmployeeList();
+            buildRFIDComboBox();
+            clearEmployeeInformation();
         } catch(NumberFormatException e) {
             e.printStackTrace();
         }
@@ -503,11 +509,10 @@ public class MainWindowController implements Initializable {
         deviceID.setVisible(true);
         deviceName.setText(deviceEntity.getDevice());
         deviceName.setVisible(true);
-        totalUsage.setText("" + getTotalUsage(deviceEntity));
-        totalUsage.setVisible(true);
         displayActivationTimes(deviceEntity);
     }
 
+    /**
     private int getTotalUsage(DeviceEntity deviceEntity) {
         List<DeviceusagehistoryEntity> deviceusagehistoryEntities = deviceDatabaseController.getDeviceUsageHistory(deviceEntity);
         int totalUsage = 0;
@@ -516,6 +521,7 @@ public class MainWindowController implements Initializable {
         }
         return totalUsage;
     }
+     */
 
     private void displayActivationTimes(DeviceEntity deviceEntity) {
         activationTimes.getItems().clear();
@@ -529,8 +535,6 @@ public class MainWindowController implements Initializable {
         deviceID.setVisible(false);
         deviceName.setText(null);
         deviceName.setVisible(false);
-        totalUsage.setText(null);
-        totalUsage.setVisible(false);
         activationTimes.getItems().clear();
     }
 

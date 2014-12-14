@@ -14,19 +14,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Thread applicationThread = new Thread() {
-            public void run() {
-                try {
-                    Parent root = FXMLLoader.load(getClass().getResource("fxml/capstoneGUI.fxml"));
-                    primaryStage.setTitle("Main window");
-                    primaryStage.setScene(new Scene(root, 800, 600));
-                    primaryStage.setResizable(false);
-                    primaryStage.show();
-                } catch(Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        };
         Thread hardwareThread = new Thread() {
             public void run() {
                 SerialClass serial = new SerialClass();
@@ -40,8 +27,12 @@ public class Main extends Application {
                 serial.close();
             }
         };
-        applicationThread.start();
         hardwareThread.start();
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/capstoneGUI.fxml"));
+        primaryStage.setTitle("Main window");
+        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setResizable(false);
+        primaryStage.show();
     }
 
     public static void main(String[] args) {

@@ -36,6 +36,9 @@ CREATE TABLE DeviceActivationTimes (id INT PRIMARY KEY AUTO_INCREMENT,
 					deviceID INT NOT NULL,
 					activationTime DATETIME NOT NULL,
 					disableTime DATETIME NOT NULL,
+					summary VARCHAR(100),
+					description VARCHAR(250),
+					groupName VARCHAR(50),
 					UNIQUE (deviceID, activationTime),
 					CONSTRAINT deviceActivationTimes_foreign_1 FOREIGN KEY (deviceID) REFERENCES Device (id)
 );

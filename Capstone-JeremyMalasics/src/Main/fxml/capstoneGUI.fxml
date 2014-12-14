@@ -207,8 +207,8 @@
                                              <children>
                                                 <Label layoutX="14.0" layoutY="54.0" prefHeight="17.0" prefWidth="85.0" text="Device Name: " />
                                                 <Text fx:id="deviceName" layoutX="100.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="deviceName" visible="false" wrappingWidth="133.85546875" />
-                                                <Label layoutX="193.0" layoutY="54.0" prefHeight="17.0" prefWidth="80.0" text="Total Usage: " />
-                                                <Text fx:id="totalUsage" layoutX="276.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="totalUsage" visible="false" wrappingWidth="106.30078125" />
+                                                <!-- <Label layoutX="193.0" layoutY="54.0" prefHeight="17.0" prefWidth="80.0" text="Total Usage: " />
+                                                <Text fx:id="totalUsage" layoutX="276.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="totalUsage" visible="false" wrappingWidth="106.30078125" /> -->
                                              </children>
                                           </HBox>
                                        </children>
@@ -219,14 +219,14 @@
                                             <items>
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                                    <children>
-                                                      <LineChart fx:id="UsageHistory" layoutX="49.0" layoutY="-61.0" prefHeight="236.0" prefWidth="619.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <!-- <LineChart fx:id="UsageHistory" layoutX="49.0" layoutY="-61.0" prefHeight="236.0" prefWidth="619.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                         <xAxis>
                                                           <CategoryAxis side="BOTTOM" />
                                                         </xAxis>
                                                         <yAxis>
                                                           <NumberAxis side="LEFT" />
                                                         </yAxis>
-                                                      </LineChart>
+                                                      </LineChart> -->
                                                    </children>
                                                 </AnchorPane>
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
